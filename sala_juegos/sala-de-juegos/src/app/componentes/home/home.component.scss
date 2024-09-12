@@ -1,0 +1,59 @@
+h1 {
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 3.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+p
+{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin: 40px 0px;
+}
+.seccion-juegos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 100px;
+    padding: 20px;
+    align-items: center; 
+}
+
+.seccion-juegos img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.3s ease; 
+}
+
+.seccion-juegos img:hover {
+    transform: scale(1.05); 
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
+}
+
+a
+{
+    background-color: burlywood; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    padding: 10px 20px; 
+    margin-left: 110px; 
+    text-decoration: none;
+    border-radius: 15px; 
+    font-size: 1.2em; 
+    transition: background-color 0.3s, transform 0.3s;
+}
+a:hover {
+    background-color: rgb(230, 171, 94); 
+    transform: scale(1.05); 
+}
+
+a:focus {
+    outline: none; 
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); 
+}
