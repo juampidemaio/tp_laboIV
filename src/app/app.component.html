@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <a class="nav-link" routerLink="home" routerLinkActive="active-route">HOME</a>
+  <a class="nav-link" routerLink="quien-soy" routerLinkActive="active-route">QUIÉN SOY</a>
+
+  <div class="nav-links-derecha">
+    <a *ngIf="isLoggedIn" class="nav-link-perfil">PERFIL</a>
+    <a *ngIf="isLoggedIn" class="nav-link-logout" (click)="confirmLogout()">CERRAR SESION</a>
+    <a *ngIf="!isLoggedIn" class="nav-link-login" routerLink="login" routerLinkActive="active-route">INICIAR SESION</a>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,28 @@
+<div class="overlay d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-4 shadow-lg" style="width: 450px; border-radius: 20px;">
+    <h1 class="text-center mb-4">Registrarse</h1>
+    <form (ngSubmit)="Register()" #registerForm="ngForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="nuevoEmail" name="email" placeholder="Ingrese su email" required>
+      </div>
+      <div class="form-group">
+        <label for="clave">Contraseña</label>
+        <input type="password" class="form-control" id="clave" [(ngModel)]="nuevaClave" name="clave" placeholder="Ingrese una contraseña" required>
+      </div>
+
+      <div class="text-center mb-3">
+        <a id="olvido-contrasena" class="text-decoration-none">¿Olvidó su contraseña?</a>
+      </div>
+
+      <button type="submit" class="btn btn-warning btn-block rounded-pill font-weight-bold">
+        Registrarse
+      </button>
+
+      <div class="text-center mt-3">
+        <span>¿Ya tienes una cuenta?</span>
+        <a id="iniciar-sesion" class="text-decoration-none" (click)="goTo('/login')">Iniciar sesión</a>
+      </div>
+    </form>
+  </div>
+</div>
