@@ -1,0 +1,39 @@
+.juego-contenedor {
+    text-align: center;
+    margin-top: 30px;
+  
+    img {
+        display: inline-block;
+    }
+
+    .boton-contenedor {
+        margin-top: 20px; 
+        display: flex;
+        justify-content: center; 
+    }
+  
+    .puntaje {
+        margin-top: 20px;
+    }
+}
+button {
+    margin: 0 10px; 
+    padding: 15px;
+    font-size: 18px;
+    background-color: #29af0873;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #245707;
+    }
+}
+
+p {
+    font-size: 1.25em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin-top: 40px;
+}

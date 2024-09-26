@@ -18,11 +18,14 @@
         <p>Ahorcado</p>
         <a href="scores">ver puntuacion</a>
     </div>
-    <div class="juego-nuevo">
-        <img src="https://img.freepik.com/vector-gratis/hoja-trabajo-juego-combinacion-creativo-animales_23-2148782846.jpg" alt="juego nuevo">
+    <div class="juego-cartas">
+        <img (click)="goTo('juego-cartas')" src="https://img.freepik.com/vector-gratis/hoja-trabajo-juego-combinacion-creativo-animales_23-2148782846.jpg" alt="juego nuevo">
         <p>Juego Nuevo</p>
         <a href="scores">ver puntuacion</a>
     </div>
 </div>
-
+<div class="chat-container">
+    <img src="chat.png" (click)="toggleChat()" alt="Mostrar chat" class="chat-icon">
+    <app-chat [isChatVisible]="showChat" (chatVisibilityChange)="showChat = $event"></app-chat>
+</div>
 

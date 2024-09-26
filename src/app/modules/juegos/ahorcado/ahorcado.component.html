@@ -1,1 +1,30 @@
-<p>ahorcado works!</p>
+<div class="juego-ahorcado">
+  <!-- Mostrar el progreso del ahorcado -->
+  <div class="figura-ahorcado">
+    <img [src]="imagenActual" alt="Ahorcado" />
+    <p>Intentos fallidos: {{ intentosFallidos }}/{{ maxIntentos }}</p>
+  </div>
+  
+  <!-- Mostrar la palabra oculta -->
+  <div class="contenedor-palabra">
+    <span *ngFor="let letra of palabraMostrada">{{ letra }} </span>
+  </div>
+  
+  <!-- Teclado con las letras -->
+  <div class="teclado">
+    <button *ngFor="let letra of abecedario" 
+            [disabled]="letrasUsadas.includes(letra) || juegoTerminado" 
+            (click)="manejarClickLetra(letra)">
+      {{ letra }}
+    </button>
+  </div>
+  
+  <!-- Mensaje de ganar o perder -->
+  <div *ngIf="juegoTerminado" class="juego-terminado">
+    <p *ngIf="ganaste">¡Felicidades, ganaste!</p>
+    <p *ngIf="!ganaste">Lo siento, perdiste. La palabra era: {{ palabraSeleccionada }}</p>
+  </div>
+  
+  <!-- Botón para reiniciar -->
+  <button *ngIf="juegoTerminado" (click)="reiniciarJuego()">Reiniciar juego</button>
+</div>

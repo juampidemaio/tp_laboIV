@@ -1,1 +1,11 @@
-<p>preguntados works!</p>
+<div class="preguntados-game">
+  <h2>Pregunta</h2>
+  <img *ngIf="preguntaActual" [src]="preguntaActual.imagen" alt="Imagen de la pregunta" />
+  <p>{{ preguntaActual?.pregunta }}</p>
+  <div class="opciones">
+    <button *ngFor="let opcion of opciones" (click)="seleccionarRespuesta(opcion)">
+      {{ opcion }}
+    </button>
+  </div>
+  <p>Puntaje: {{ puntaje }}</p>
+</div>

@@ -1,0 +1,66 @@
+.chat-container {
+  position: fixed; 
+  right: 20px; 
+  bottom: 20px; 
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px; /* Puedes ajustar este valor según lo que prefieras */
+  max-height: 400px; /* Aumentar la altura máxima para permitir más mensajes */
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  z-index: 1000; 
+  overflow: hidden; /* Asegura que no se desborde el contenido */
+}
+
+.chat-box {
+  max-height: 300px; /* Mantén esta altura para el área de mensajes */
+  overflow-y: auto; /* Permite el desplazamiento si hay muchos mensajes */
+  margin-bottom: 10px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centra verticalmente el input y el botón */
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px; /* Espacio entre el input y el botón */
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+.close-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+}
+
+.close-btn:hover {
+  color: red;
+}
+.timestamp {
+  font-size: 0.8em; /* Tamaño de fuente más pequeño */
+  color: gray; /* Color gris */
+  margin-left: 5px; /* Espaciado a la izquierda */
+}
+

@@ -1,0 +1,22 @@
+<div class="cartas-grid">
+  <div *ngFor="let carta of cartas; let i = index" class="carta" (click)="seleccionarCarta(i)">
+    <img [src]="carta.volteada ? carta.image : 'cartaVolteada.png'" alt="Carta">
+  </div>
+</div>
+
+<div class="botones-juego">
+  <button *ngIf="!juegoIniciado" (click)="empezarRonda()">
+    Empezar el juego
+  </button>
+
+  <!-- Botón para reiniciar el juego -->
+  <button *ngIf="juegoIniciado" (click)="resetearJuego()">
+    Reiniciar juego
+  </button>
+</div>
+
+
+<!-- Mostrar un mensaje de estado para el usuario -->
+<div class="mensaje-juego">
+  <p>{{ mensaje }}</p>
+</div>

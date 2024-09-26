@@ -60,3 +60,44 @@ a:focus {
     outline: none; 
     box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); 
 }
+.chat-container {
+    position: fixed; /* Fija el contenedor en la pantalla */
+    right: 20px; /* Alineado a la derecha */
+    bottom: 20px; /* Alineado en la parte inferior */
+    max-width: 300px; /* Ancho máximo */
+    max-height: 400px; /* Altura máxima */
+    width: 250px; /* Ancho definido */
+    height: auto;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Para que quede por encima de otros elementos */
+}
+
+.chat-icon {
+    cursor: pointer;
+    width: 50px; /* Tamaño pequeño del icono */
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+app-chat {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.chat-box {
+    max-height: 250px; /* Limitar altura para mantener el tamaño pequeño */
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}

@@ -1,0 +1,51 @@
+.juego-ahorcado {
+  text-align: center;
+  font-family: Arial, sans-serif;
+
+  .figura-ahorcado {
+    margin-bottom: 20px;
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .contenedor-palabra {
+    margin-bottom: 20px;
+    span {
+      font-size: 24px;
+      margin: 0 5px;
+    }
+  }
+
+  .teclado {
+    display: grid;
+    grid-template-columns: repeat(7, 40px);
+    gap: 40px;
+    justify-content: center;
+    margin-top: 20px;
+
+    
+  }
+
+  .juego-terminado {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+}
+button {
+  font-size: 25px;
+  text-align: center;
+  padding: 10px 30px;
+  background-color: rgba(9, 199, 9, 0.781);
+  border: 1px solid #020000;
+  cursor: pointer;
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,42 @@
+.cartas-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 10px;
+  justify-items: center; 
+}
+
+.carta img {
+  width: 100px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.botones-juego {
+  display: flex; 
+  justify-content: center; 
+  margin-top: 20px;
+}
+
+.botones-juego button {
+  padding: 15px 30px; 
+  font-size: 1.2rem;
+  background-color: #4CAF50; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  transition: background-color 0.3s, color 0.3s; 
+  cursor: pointer; 
+}
+
+.botones-juego button:hover {
+  background-color: #388E3C; 
+  color: #E0E0E0; 
+}
+
+.mensaje-juego p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: red;
+  text-align: center;
+}

@@ -1,1 +1,19 @@
-<p>mayor-menor works!</p>
+<div class="juego-contenedor">
+    <h1>Juego de Mayor o Menor</h1>
+  
+    <div *ngIf="!juegoTerminado">
+        <p>Carta actual:</p>
+        <img *ngIf="cartaActual" [src]="cartaActual.image" alt="Carta actual">
+        <div class="boton-contenedor">
+            <button (click)="adivinarMayor()">Mayor</button>
+            <button (click)="adivinarMenor()">Menor</button>
+        </div>
+    </div>
+  
+    <p>{{ mensaje }}</p>
+  
+    <div class="puntaje">
+        <p>Puntuación: {{ puntaje }}</p>
+        <button (click)="iniciarJuego()">Reiniciar juego</button>
+    </div>
+</div>
