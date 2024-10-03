@@ -1,11 +1,20 @@
-<div class="preguntados-game">
-  <h2>Pregunta</h2>
-  <img *ngIf="preguntaActual" [src]="preguntaActual.imagen" alt="Imagen de la pregunta" />
-  <p>{{ preguntaActual?.pregunta }}</p>
-  <div class="opciones">
-    <button *ngFor="let opcion of opciones" (click)="seleccionarRespuesta(opcion)">
-      {{ opcion }}
-    </button>
+<div *ngIf="juegoIniciado" class="pregunta-contenedor">
+  <h2>{{ preguntaActual?.pregunta }}</h2>
+
+  <div *ngIf="imagenActual">
+    <img [src]="imagenActual" alt="Imagen relacionada" class="imagen-pregunta">
   </div>
+
+  <ul>
+    <li *ngFor="let opcion of opciones">
+      <button (click)="seleccionarRespuesta(opcion)">{{ opcion }}</button>
+    </li>
+  </ul>
+
   <p>Puntaje: {{ puntaje }}</p>
+</div>
+
+<div *ngIf="!juegoIniciado" class="fin-juego-contenedor">
+  <p>¡El juego ha terminado!</p>
+  <p>Puntaje final: {{ puntaje }}</p>
 </div>

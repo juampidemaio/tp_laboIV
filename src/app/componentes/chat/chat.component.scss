@@ -3,34 +3,80 @@
   right: 20px; 
   bottom: 20px; 
   border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 400px; /* Puedes ajustar este valor según lo que prefieras */
-  max-height: 400px; /* Aumentar la altura máxima para permitir más mensajes */
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  border-radius: 15px; 
+  padding: 10px;
+  max-width: 480px; 
+  max-height: 450px; 
+  background-color: #0b530be5;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
   z-index: 1000; 
-  overflow: hidden; /* Asegura que no se desborde el contenido */
+  overflow: hidden; 
 }
 
 .chat-box {
-  max-height: 300px; /* Mantén esta altura para el área de mensajes */
-  overflow-y: auto; /* Permite el desplazamiento si hay muchos mensajes */
-  margin-bottom: 10px;
+  max-height: 350px; 
+  margin-bottom: 13px;
+  overflow-y: scroll; /* Permite el desplazamiento vertical */
+  padding-right: 10px;
+  scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+}
+
+.chat-box::-webkit-scrollbar {
+  display: none; /* Oculta la barra de desplazamiento en Chrome, Safari, y Edge */
+}
+
+
+.message {
+  margin: 10px 0;
+  font-size: 0.9em;
+  display: flex; 
+}
+
+.my-message {
+  background-color: #d1ffd1; 
+  padding: 10px;
+  border-radius: 20px; 
+  border: 1px solid #b2ebf2; 
+  max-width: 60%;
+  margin-left: auto; 
+  display: inline-block;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1); /* Añadimos sombra para un efecto flotante */
+}
+
+.other-message {
+  background-color: #f1f1f1; 
+  padding: 10px;
+  border-radius: 20px; 
+  border: 1px solid #ccc; 
+  max-width: 60%;
+  margin-right: auto;
+  display: inline-block;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1); /* Sombra flotante para uniformidad */
+}
+
+.message-wrapper-left {
+  display: flex; 
+  justify-content: flex-start; 
+}
+
+.message-wrapper-right {
+  display: flex; 
+  justify-content: flex-end; 
 }
 
 .input-container {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Centra verticalmente el input y el botón */
+  align-items: center;
 }
 
 input {
   flex: 1;
-  padding: 10px;
+  padding: 10px 3px; 
   border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-right: 10px; /* Espacio entre el input y el botón */
+  border-radius: 10px;
+  margin-right: 10px; 
+  max-width: 70%;
 }
 
 button {
@@ -40,27 +86,44 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  min-width: 80px;
+  position: absolute; 
+  bottom: 10px; 
+  right: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Añadimos sombra para el botón */
 }
 
 button:hover {
   background-color: #4cae4c;
 }
-
 .close-btn {
-  background-color: transparent;
+  background-color: #02f80277;
   border: none;
-  font-size: 1.5em;
+  font-size: 0.7em; /* Tamaño aún más pequeño */
   font-weight: bold;
   cursor: pointer;
-  float: right;
+  color: #000000; /* Color del botón más suave */
+  padding: 5px; /* Espacio reducido */
+  border-radius: 30px; /* Redondea el botón para darle aspecto de icono */
+  width: 20px; /* Especifica el ancho del botón */
+  height: 25px; /* Especifica la altura del botón */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Mantén el botón absoluto dentro del contenedor */
+  top: 10px; /* Posición desde la parte superior */
+  right: 10px; /* Posición desde la parte derecha */
 }
 
 .close-btn:hover {
-  color: red;
-}
-.timestamp {
-  font-size: 0.8em; /* Tamaño de fuente más pequeño */
-  color: gray; /* Color gris */
-  margin-left: 5px; /* Espaciado a la izquierda */
+  background-color: #0007001c;
+  color: white; /* Cambia a blanco al pasar el ratón */
 }
 
+.timestamp {
+  font-size: 0.7em; 
+  color: gray; 
+  text-align: right; /* Alinear a la derecha dentro del mensaje */
+  margin-top: 5px; 
+  display: block; /* Ahora está debajo del mensaje */
+}

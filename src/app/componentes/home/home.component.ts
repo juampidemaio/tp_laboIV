@@ -45,4 +45,8 @@ export class HomeComponent implements OnInit {
   goTo(path: string) {
     this.router.navigate([`/juegos/${path}`]); 
   }
+
+  llevarJuego(game: string): void {
+    this.router.navigate(['puntaje'], { queryParams: { game } });
+  }
 }

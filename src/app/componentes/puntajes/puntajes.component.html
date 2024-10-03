@@ -1,0 +1,9 @@
+<div>
+  <h3>Puntajes para el juego: {{ gameName }}</h3>
+  <ul>
+    <li *ngFor="let puntaje of puntajes">
+      {{ puntaje.user }} - {{ puntaje.puntaje }} puntos 
+      <span class="fecha">({{ puntaje.fecha | date: 'medium' }})</span>
+    </li>
+  </ul>
+</div>

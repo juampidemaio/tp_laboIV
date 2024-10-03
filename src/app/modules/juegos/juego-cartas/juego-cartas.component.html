@@ -10,13 +10,15 @@
   </button>
 
   <!-- Botón para reiniciar el juego -->
-  <button *ngIf="juegoIniciado" (click)="resetearJuego()">
+  <button *ngIf="juegoIniciado" (click)="guardarPuntaje()" (click)="resetearJuego()" >
     Reiniciar juego
   </button>
 </div>
 
 
+
 <!-- Mostrar un mensaje de estado para el usuario -->
 <div class="mensaje-juego">
   <p>{{ mensaje }}</p>
+  <p>su puntaje es de: {{ puntaje }}</p>
 </div>

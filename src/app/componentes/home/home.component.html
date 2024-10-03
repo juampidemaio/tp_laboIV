@@ -3,25 +3,34 @@
 <h4 *ngIf="isLoggedIn">bienvenido {{user?.email}}, divertite</h4>
 
 <div class="seccion-juegos">
-    <div class="preguntados">
+    <div class="juego">
         <img (click)="goTo('preguntados')" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfcCz3JlM4xlxLvDWPSj71xusZCerXq0QEpg&s" alt="preguntados">
-        <p>Preguntados</p>
-        <a href="scores">ver puntuacion</a>
+        <div class="text-container">
+            <p>Preguntados</p>
+            <a (click)="llevarJuego('preguntados')">ver puntuación</a>
+        </div>
     </div>
-    <div class="mayor-menor">
+    <div class="juego">
         <img (click)="goTo('mayor-menor')" src="https://resizer.glanacion.com/resizer/v2/un-juego-con-cartas-espanolas-sin-comodines-ni-L4YAHBM6IVBLNEJA5E33NQTKHI.jpg?auth=c4b877fbfbe96ead5811742b26ba93b66a4e97730d76bc15e6920f84a1745fd4&width=768&quality=70&smart=false" alt="mayor o menor">
-        <p>Mayor o Menor</p>
-        <a href="scores">ver puntuacion</a>
+        <div class="text-container">
+            <p>Mayor o Menor</p>
+            <a (click)="llevarJuego('Mayor o Menor')">ver puntuacion</a>
+        </div>
     </div>
-    <div class="ahorcado">
+    <div class="juego">
+        
         <img (click)="goTo('ahorcado')" src="https://cdn-icons-png.flaticon.com/512/2241/2241387.png" alt="ahorcado">
-        <p>Ahorcado</p>
-        <a href="scores">ver puntuacion</a>
+        <div class="text-container">
+            <p>Ahorcado</p>
+            <a (click)="llevarJuego('Ahorcado')">ver puntuacion</a>
+        </div>
     </div>
-    <div class="juego-cartas">
+    <div class="juego">      
         <img (click)="goTo('juego-cartas')" src="https://img.freepik.com/vector-gratis/hoja-trabajo-juego-combinacion-creativo-animales_23-2148782846.jpg" alt="juego nuevo">
-        <p>Juego Nuevo</p>
-        <a href="scores">ver puntuacion</a>
+        <div class="text-container"> 
+            <p>Juego Nuevo</p>
+            <a (click)="llevarJuego('juego de cartas')">ver puntuacion</a>
+        </div>
     </div>
 </div>
 <div class="chat-container">

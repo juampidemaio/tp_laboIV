@@ -1,13 +1,22 @@
 <div class="chat-container" *ngIf="isChatVisible">
-  <button class="close-btn" (click)="toggleChat()">x</button> <!-- Botón para cerrar el chat -->
+  <button class="close-btn" (click)="toggleChat()">x</button>
   
-  <div class="messages chat-box">
-    <div *ngFor="let message of messages" class="message">
-      <strong>{{ message.user }}</strong>: {{ message.text }}
-      <span class="timestamp">{{ message.timestamp?.toDate() | date:'shortTime' }}</span>
+  <div class="chat-box" #messagesContainer>
+    <div *ngFor="let message of messages">
+      <div class="message-wrapper-left" *ngIf="message.user !== currentUser">
+        <div class="message other-message">
+          <strong>{{ message.user }}</strong>: {{ message.text }}
+          <span class="timestamp">{{ message.timestamp?.toDate() | date: 'medium' }}</span>
+        </div>
+      </div>
+      <div class="message-wrapper-right" *ngIf="message.user === currentUser">
+        <div class="message my-message">
+          <strong>{{ message.user }}</strong>: {{ message.text }}
+          <span class="timestamp">{{ message.timestamp?.toDate() | date: 'medium' }}</span>
+        </div>
+      </div>
     </div>
   </div>
-  
 
   <div class="input-container">
     <input [(ngModel)]="newMessage" (keydown)="handleKeydown($event)" placeholder="Escribe un mensaje..." />

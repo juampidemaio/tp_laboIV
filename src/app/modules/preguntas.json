@@ -1,0 +1,18 @@
+[
+    {
+      "pregunta": "¿Cuál es la capital de Francia?",
+      "correct_answer": "París",
+      "incorrect_answers": ["Londres", "Berlín", "Madrid"]
+    },
+    {
+      "pregunta": "¿Qué planeta es conocido como el Planeta Rojo?",
+      "correct_answer": "Marte",
+      "incorrect_answers": ["Júpiter", "Saturno", "Venus"]
+    },
+    {
+      "pregunta": "¿Quién escribió 'Cien años de soledad'?",
+      "correct_answer": "Gabriel García Márquez",
+      "incorrect_answers": ["Pablo Neruda", "Jorge Luis Borges", "Julio Cortázar"]
+    }
+  ]
+  
